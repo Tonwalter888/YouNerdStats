@@ -1,16 +1,12 @@
 #import "../YTVideoOverlay/Header.h"
 #import "../YTVideoOverlay/Init.x"
-#import <YouTubeHeader/YTUIResources.h>
 #import <YouTubeHeader/YTMainAppVideoPlayerOverlayViewController.h>
 #import <YouTubeHeader/YTMainAppControlsOverlayView.h>
 #import <YouTubeHeader/YTInlinePlayerBarContainerView.h>
+#import <YouTubeHeader/QTMIcon.h>
 #import <roothide.h>
 
 #define TweakKey @"YouNerdStats"
-
-@interface YTUIResources (YouNerdStats)
-+ (UIImage *)statisticsGraphOutline;
-@end
 
 @interface UIView (YouNerdStats)
 - (UIViewController *)_viewControllerForAncestor;
@@ -45,7 +41,7 @@ static NSBundle *YouNerdStatsBundle() {
 static NSBundle *tweakBundle = nil;
 
 static UIImage *iconImage() {
-    return [[%c(YTUIResources) statisticsGraphOutline] imageWithTintColor:[UIColor whiteColor]];
+    return [%c(QTMIcon) imageWithName:@"youtube_outline/statistics_graph_24pt" color:[UIColor whiteColor]];
 }
 
 %group Top
