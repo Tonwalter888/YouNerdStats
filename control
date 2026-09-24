@@ -1,0 +1,9 @@
+Package: dev.water888.younerdstats
+Name: YouNerdStats
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Enable stats for nerds quicker and faster.
+Maintainer: Tonwalter888
+Author: Tonwalter888
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 11.0), com.ps.ytvideooverlay (>= 2.0.0)
