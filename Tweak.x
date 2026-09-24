@@ -33,10 +33,11 @@ static NSBundle *YouNerdStatsBundle() {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         NSString *tweakBundlePath = [[NSBundle mainBundle] pathForResource:TweakKey ofType:@"bundle"];
-        if (tweakBundlePath)
+        if (tweakBundlePath) {
             bundle = [NSBundle bundleWithPath:tweakBundlePath];
-        else
-            bundle = [NSBundle bundleWithPath:jbroot(@"/Library/Application Support/%@.bundle"), TweakKey];
+        } else {
+            bundle = [NSBundle bundleWithPath:[NSString stringWithFormat:jbroot(@"/Library/Application Support/%@.bundle"), TweakKey]];
+        }
     });
     return bundle;
 }
